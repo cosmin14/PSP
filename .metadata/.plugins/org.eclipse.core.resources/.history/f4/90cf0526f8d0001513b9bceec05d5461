@@ -1,0 +1,29 @@
+package Sockets;
+
+public class EmisorDatagram {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		try {
+			System.out.pr i ntln("Creando socket datagram");
+			DatagramSocket datagramSocket = new DatagramSocket();
+			System.out.println("Env iando mensaj e ");
+			String mensaje = "me nsaje de s de el emisor";
+			InetAddress addr = InetAddress.getByName("l o calhost");
+			DatagramPacket data grama =
+			new DatagramPacket(men saje.getBytes(),
+			mensaje.getBytes() .length,
+			addr, 5555);
+			datagramSocket. send (datagrama) ;
+			System.out.println("Mensaje env iado ");
+			System.out.println("Cerrando el soc ket datagrama");
+			datagramS ocket.cl ose() ;
+			System.out.println("Terminado") ;
+			c atch (IOEx cep tion e) {
+			e.printStackTrace();
+
+	}
+
+}

@@ -1,0 +1,32 @@
+package Parking;
+
+public class Parking {
+
+	/**
+	 * @param args
+	 * @throws InterruptedException 
+	 */
+	public static void main(String[] args) throws InterruptedException {
+		
+		int N = 10; //Numero de plazas
+		Barrera barrera = new Barrera(N);
+		
+		int C = 15; //Numero de coches
+		
+		Coche coches[] = new Coche[C];
+		for (int i= 0; i < C; i++){
+			coches[i]= new Coche(i+1, barrera);
+			coches[i].start();
+			coches[i].sleep(1500);
+		}
+		try {
+			for (int i= 0; i < C; i++){
+			coches[i].join();
+			}
+		} catch (InterruptedException ex) {
+		System.out.println("Hilo principal interrumpido.");
+		}
+
+	}
+
+}

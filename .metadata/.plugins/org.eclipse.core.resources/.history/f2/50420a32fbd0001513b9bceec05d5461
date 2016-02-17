@@ -1,0 +1,41 @@
+package Sockets;
+
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+
+public class ReceptorDatagram {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		try {
+			
+			@SuppressWarnings("resource")
+			DatagramSocket serverSocket = new DatagramSocket(5555);
+	        byte[] receiveData = new byte[255];
+	        byte[] sendData = new byte[8];
+
+        	DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
+	        String sentence = "";
+	        
+	        System.out.println(sentence.length());
+	        
+	        for (int i = 0; i < receivePacket.length; i++) {
+		        serverSocket.receive(receivePacket);
+		        sentence = new String( receivePacket.getData());
+		        System.out.println("RECEIVED: " + sentence);
+		        InetAddress IPAddress = InetAddress.getByName("localhost");
+		        DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, 5555);
+		        serverSocket.send(sendPacket);
+			}
+	        
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

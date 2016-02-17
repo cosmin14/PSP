@@ -1,0 +1,73 @@
+!SESSION 2016-02-11 20:08:05.716 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_ES
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-02-11 20:08:25.105
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2016-02-11 20:25:16.251
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Core Exception [code 272] Could not write file '/home/jorgi/eclipseProjects/PSP/src/Sockets/ServeridorSocketStream.java'.
+	at org.eclipse.jdt.internal.ui.javaeditor.DocumentAdapter.save(DocumentAdapter.java:474)
+	at org.eclipse.jdt.internal.core.CommitWorkingCopyOperation.executeOperation(CommitWorkingCopyOperation.java:123)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:728)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:793)
+	at org.eclipse.jdt.internal.core.CompilationUnit.commitWorkingCopy(CompilationUnit.java:391)
+	at org.eclipse.jdt.ui.wizards.NewTypeWizardPage.createType(NewTypeWizardPage.java:2167)
+	at org.eclipse.jdt.internal.ui.wizards.NewClassCreationWizard.finishPage(NewClassCreationWizard.java:71)
+	at org.eclipse.jdt.internal.ui.wizards.NewElementWizard$2.run(NewElementWizard.java:118)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:728)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5204)
+	at org.eclipse.jdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:106)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: java.io.IOException: No queda espacio en el dispositivo
+	at java.io.FileOutputStream.writeBytes(Native Method)
+	at java.io.FileOutputStream.write(FileOutputStream.java:345)
+	at org.eclipse.core.internal.utils.FileUtil.transferStreams(FileUtil.java:256)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.write(FileSystemResourceManager.java:1102)
+	at org.eclipse.core.internal.resources.File.internalSetContents(File.java:321)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:360)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:464)
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.commitFileBufferContent(ResourceTextFileBuffer.java:391)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.commit(ResourceFileBuffer.java:325)
+	at org.eclipse.jdt.internal.ui.javaeditor.DocumentAdapter.save(DocumentAdapter.java:472)
+	... 14 more
+Caused by: org.eclipse.core.internal.resources.ResourceException(/home/jorgi/eclipseProjects/PSP/src/Sockets/ServeridorSocketStream.java)[272]: java.io.IOException: No queda espacio en el dispositivo
+	at java.io.FileOutputStream.writeBytes(Native Method)
+	at java.io.FileOutputStream.write(FileOutputStream.java:345)
+	at org.eclipse.core.internal.utils.FileUtil.transferStreams(FileUtil.java:256)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.write(FileSystemResourceManager.java:1102)
+	at org.eclipse.core.internal.resources.File.internalSetContents(File.java:321)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:360)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:464)
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.commitFileBufferContent(ResourceTextFileBuffer.java:391)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.commit(ResourceFileBuffer.java:325)
+	at org.eclipse.jdt.internal.ui.javaeditor.DocumentAdapter.save(DocumentAdapter.java:472)
+	at org.eclipse.jdt.internal.core.CommitWorkingCopyOperation.executeOperation(CommitWorkingCopy
+!ENTRY org.eclipse.jdt.ui 4 10001 2016-02-11 20:29:49.737
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [/PSP/src/Sockets/ServidorSocketStream.java already exists in target]
+	at org.eclipse.jdt.internal.core.CreateCompilationUnitOperation.executeOperation(CreateCompilationUnitOperation.java:104)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:728)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:793)
+	at org.eclipse.jdt.internal.core.PackageFragment.createCompilationUnit(PackageFragment.java:145)
+	at org.eclipse.jdt.ui.wizards.NewTypeWizardPage.createType(NewTypeWizardPage.java:2038)
+	at org.eclipse.jdt.internal.ui.wizards.NewClassCreationWizard.finishPage(NewClassCreationWizard.java:71)
+	at org.eclipse.jdt.internal.ui.wizards.NewElementWizard$2.run(NewElementWizard.java:118)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:728)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5204)
+	at org.eclipse.jdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:106)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 1 org.eclipse.jdt.core 4 977 2016-02-11 20:29:49.737
+!MESSAGE /PSP/src/Sockets/ServidorSocketStream.java already exists in target

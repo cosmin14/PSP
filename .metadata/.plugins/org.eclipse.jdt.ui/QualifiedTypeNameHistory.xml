@@ -1,2 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="Sumermercado.Resultados"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="Parking.Barrera"/>
+<fullyQualifiedTypeName name="java.util.concurrent.Semaphore"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="java.net.Socket"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="java.net.DatagramSocket"/>
+<fullyQualifiedTypeName name="java.net.InetAddress"/>
+<fullyQualifiedTypeName name="java.net.DatagramPacket"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.net.InetSocketAddress"/>
+</qualifiedTypeNameHistroy>

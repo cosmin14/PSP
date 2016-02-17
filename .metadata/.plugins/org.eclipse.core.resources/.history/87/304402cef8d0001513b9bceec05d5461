@@ -1,0 +1,40 @@
+package Sockets;
+
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+
+public class EmisorDatagram {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		try {
+			
+			DatagramSocket serverSocket = new DatagramSocket(port);
+	        byte[] receiveData = new byte[8];
+	        byte[] sendData = new byte[8];
+			
+			System.out.println("Creando socket datagram");
+			DatagramSocket datagramSocket = new DatagramSocket();
+			System.out.println("Enviando mensaje ");
+			String mensaje = "mensaje desde el emisor";
+			InetAddress addr = InetAddress.getByName("l o calhost");
+			DatagramPacket datagrama = new DatagramPacket(
+					mensaje.getBytes(),
+					mensaje.getBytes() .length,
+					addr,
+					5555);
+			datagramSocket.send(datagrama) ;
+			System.out.println("Mensaje env iado ");
+			System.out.println("Cerrando el soc ket datagrama");
+			datagramSocket.close() ;
+			System.out.println("Terminado") ;
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}
